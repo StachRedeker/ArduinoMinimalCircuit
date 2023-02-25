@@ -1,6 +1,8 @@
 # ArduinoMinimalCircuit
 > Build a minimal ATmega328P circuit... so you don't need a full Arduino anymore. And learn something about logic gates along the way.
 
+**Warning: this repository is not complete (yet). Allow me some time to completely fill it.**
+
 This project aims at explaining how to build a minimal circuit around the ATmega328P processor. The ATmega328P is commonly found in microcontroller boards such as the Arduino Uno. A minimal circuit is everything that is nessecary to use the processor. So, basically, we will be building a simpler version of the Arduino Uno. We will also add various I/O components to show that the system works. 
 
 Why is a minimal circuit implementation of an Arduino useful? Why not buy an Arduino and use it directly? That's a valid question! Sometimes, we are not interested in every Arduino function. For example, a project might not require all digital and analog pins, or a 3.3 [V] channel. In that case, it might be more elegant to only build what you need; so, building an 'Arduino' from scratch. It is also useful to build your own Arduino if you are limited to a specific physcial size, or if you want to use the least amount of power possible (e.g. when running on batteries).
