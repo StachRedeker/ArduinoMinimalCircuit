@@ -62,6 +62,26 @@ Figure 3: we already prepare some connections for programming. Image courtesy of
 
 ## Software design
 
+``` c++
+int getSwitchStatus () {
+  return (8*digitalRead(sw1) + 4*digitalRead(sw2) + 2*digitalRead(sw3) + digitalRead(sw4));
+}
+```
+
+``` c++
+bool OR () {
+  return (digitalRead(b1) || digitalRead(b2));
+}
+```
+
+``` c++
+bool NAND () {
+  return !AND();
+}
+```
+
+
+
 
 
 ## Instructions
