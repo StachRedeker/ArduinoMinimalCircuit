@@ -8,6 +8,7 @@ Why is a minimal circuit implementation of an Arduino useful? Why not buy an Ard
 If you work along with this project, I assume that you have some experience with Arduinos. I assume that you have worked with the Arduino IDE, that you know how to hook up an Arduino to your computer, program it, and that you are able to build basic circuits on breadboard. The final product will look something like this:
 
 ![ATmega328P minimal circuit with various I/O components and power supply](/breadboard2.jpeg)
+Figure 1: the final result.
 
 
 
@@ -41,11 +42,20 @@ These components are needed for the build:
 * 4x DIP switch
 * 1x Red LED
 * 1x 220 [Ohm] resistor
-* 6x 10k [Ohm] resitor
+* 7x 10k [Ohm] resitor
 * 1x L7805CV voltage regulator
 * various jumper wires
 * USB cable to connect the Arduino Uno to your PC
 
+Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (will function as a clock), and the two capacitors.
+
+![ATmega328P minimal circuit](/minimalcircuit.webp)
+Figure 2: the minimal circuit for the ATmega328P chip. Image courtesy of [Electrozubous on Instructables](https://www.instructables.com/Bare-Minimum-Arduino-on-Breadboard/) and distributed under the BY-NC-SA Creative Commons licence.
+
+Then, hook up the ATmega328P to the Arduino Uno that we will use for programming. You can use Figure 3 as a reference. In the 'Instructions' part of this `README`, I shall explain how to actually program the chip. For now, just make sure the connections are there.
+
+![ATmega328P when programming](/minimalcircuitforburning.webp)
+Figure 3: we already prepare some connections for programming. Image courtesy of [Electrozubous on Instructables](https://www.instructables.com/Bare-Minimum-Arduino-on-Breadboard/) and distributed under the BY-NC-SA Creative Commons licence.
 
 
 ## Software design
