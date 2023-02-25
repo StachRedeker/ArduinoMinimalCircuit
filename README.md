@@ -1,4 +1,7 @@
 # ArduinoMinimalCircuit
+> Build a minimal Arduino circuit... so you don't need an Arduino anymore. And learn something about logic gates along the way.
+
+## But wait, what's a minimal circuit?
 
 
 ## Features
@@ -18,7 +21,7 @@
 
 ## Improvements
 
-[Insert information about any potential improvements to the multimeter]
+
 
 ## License
 
@@ -26,4 +29,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-[Insert acknowledgments for any individuals or resources that aided in the development of the multimeter]
+
