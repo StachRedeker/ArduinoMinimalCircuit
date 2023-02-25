@@ -112,3 +112,5 @@ This subchapter also feels appropriate to address the [Trademark & Copyright pol
 <!---
 gets rendered automatically
 -->
+
+Some footnotes (mostly nerdy additions):
