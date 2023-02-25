@@ -1,7 +1,11 @@
 # ArduinoMinimalCircuit
 > Build a minimal ATmega328P circuit... so you don't need a full Arduino anymore. And learn something about logic gates along the way.
 
+---
+
 **Warning: this repository is not complete (yet). Allow me some time to completely fill it.**
+
+---
 
 This project aims at explaining how to build a minimal circuit around the ATmega328P processor. The ATmega328P is commonly found in microcontroller boards such as the Arduino Uno. A minimal circuit is everything that is nessecary to use the processor. So, basically, we will be building a simpler version of the Arduino Uno. We will also add various I/O components to show that the system works. 
 
@@ -49,9 +53,9 @@ These components are needed for the build:
 * various jumper wires
 * USB cable to connect the Arduino Uno to your PC
 
-Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (will function as a clock), and the three capacitors. Here, a value of 10 [uF] is used for the electrolytic capacitor. Feel free to pick an aribitrary value. The electrolytic capacitor is used to stabilize the voltage on the 5 [V] rails. This is good practise, but you can omit this capacitor if you do not have one available. The two ceramic capacitors of 22 [pF] cannot be omitted!*
+Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (will function as a clock), and the three capacitors. Here, a value of 10 [uF] is used for the electrolytic capacitor. Feel free to pick an aribitrary value. The electrolytic capacitor is used to stabilize the voltage on the 5 [V] rails. This is good practise, but you can omit this capacitor if you do not have one available. The two ceramic capacitors of 22 [pF] cannot be omitted![^1]
 
-*= This is not entirely true. The ATmega328P has an inbuild 8 [MHz] oscillator that can be used without 22 [pF] capacitors, or if an external clock signal of 16 [MHz] is not present. However, this internal clock signal is not [accurate](https://electronics.stackexchange.com/questions/27763/using-the-atmega328-with-the-internal-oscillator), so I'll not use it here.
+[^1]: This is not entirely true. The ATmega328P has an inbuild 8 [MHz] oscillator that can be used without 22 [pF] capacitors, or if an external clock signal of 16 [MHz] is not present. However, this internal clock signal is not [accurate](https://electronics.stackexchange.com/questions/27763/using-the-atmega328-with-the-internal-oscillator), so I'll not use it here.
 
 ![ATmega328P minimal circuit](/minimalcircuit.webp)
 Figure 2: the minimal circuit for the ATmega328P chip. Image courtesy of [Electrozubous on Instructables](https://www.instructables.com/Bare-Minimum-Arduino-on-Breadboard/) and distributed under the BY-NC-SA Creative Commons licence.
@@ -104,3 +108,7 @@ This subchapter also feels appropriate to address the [Trademark & Copyright pol
 ## Acknowledgments
 
 
+## Footnotes
+<!---
+gets rendered automatically
+-->
