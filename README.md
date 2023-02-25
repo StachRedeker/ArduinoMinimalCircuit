@@ -53,9 +53,9 @@ These components are needed for the build:
 * various jumper wires
 * USB cable to connect the Arduino Uno to your PC
 
-Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (will function as a clock), and the three capacitors. Here, a value of 10 [uF] is used for the electrolytic capacitor. Feel free to pick an aribitrary value. The electrolytic capacitor is used to stabilize the voltage on the 5 [V] rails. This is good practise, but you can omit this capacitor if you do not have one available. The two ceramic capacitors of 22 [pF] cannot be omitted![^1]
+Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (will function as a clock), and the three capacitors. Here, a value of 10 [uF] is used for the electrolytic capacitor. Feel free to pick an aribitrary value. The electrolytic capacitor is used to stabilize the voltage on the 5 [V] rails. This is good practise, but you can omit this capacitor if you do not have one available. The two ceramic capacitors of 22 [pF] cannot be omitted![^ceramic]
 
-[^1]: This is not entirely true. The ATmega328P has an inbuild 8 [MHz] oscillator that can be used without 22 [pF] capacitors, or if an external clock signal of 16 [MHz] is not present. However, this internal clock signal is not [accurate](https://electronics.stackexchange.com/questions/27763/using-the-atmega328-with-the-internal-oscillator), so I'll not use it here.
+[^ceramic]: This is not entirely true. The ATmega328P has an inbuild 8 [MHz] oscillator that can be used without 22 [pF] capacitors, or if an external clock signal of 16 [MHz] is not present. However, this internal clock signal is not [accurate](https://electronics.stackexchange.com/questions/27763/using-the-atmega328-with-the-internal-oscillator), so I'll not use it here.
 
 ![ATmega328P minimal circuit](/minimalcircuit.webp)
 Figure 2: the minimal circuit for the ATmega328P chip. Image courtesy of [Electrozubous on Instructables](https://www.instructables.com/Bare-Minimum-Arduino-on-Breadboard/) and distributed under the BY-NC-SA Creative Commons licence.
@@ -85,6 +85,10 @@ bool NAND () {
   return !AND();
 }
 ```
+[^NAND] 
+
+[^NAND]: Observe that this is not entirely how a NAND gate is realized in hardware! In practise, an AND (so not a NAND) gate is made by placing an inverter after a NAND gate. Hence why AND gates are inherently slower than NAND gates. The NAND gate is the universal gate here. So, if I wanted to be 100% accurate, I should have made the `NAND()` function: `return !(digitalRead(b1) && digitalRead(b2));` and the `AND()` function: `return !NAND();`. But this, of course, wouldn't make things more clear. By the way, the same is true for NOR and OR. An OR gate is realized by inverting a NOR gate. (NEEDS SOURCE)
+
 
 
 
