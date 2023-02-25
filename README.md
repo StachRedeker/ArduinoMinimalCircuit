@@ -16,7 +16,15 @@ If you work along with this project, I assume that you have some experience with
 ![ATmega328P minimal circuit with various I/O components and power supply](/breadboard2.jpeg)
 *Figure 1: the final result.*
 
-
+## Table of contents
+  * [Features](#features)
+  * [Hardware design](#hardware-design)
+  * [Software design](#software-design)
+  * [Instructions](#instructions)
+  * [Improvements](#improvements)
+  * [License](#license)
+  * [Acknowledgments](#acknowledgments)
+  * [Footnotes](#footnotes)
 
 ## Features
 
