@@ -15,8 +15,37 @@ If you work along with this project, I assume that you have some experience with
 
 Not only will we build a minimal circuit for the ATmega328P chip, we will also make a small application that is able to mimic various logic gates. A user should be able to select the gate of its choice using four DIP switches on the breadboard. Then, the user can interact with the system using buttons, and sees the output in real-time thanks to a red LED.
 
+I decided upon the following gates (please note: the SR latch is not a gate):
+1) wire (buffer)
+2) NOT
+3) OR
+4) AND
+5) NOR
+6) NAND
+7) XOR
+8) XNOR
+9) SR latch
+
 
 ## Hardware design
+
+These components are needed for the build:
+
+* 1x Arduino Uno (yes, you heard that right, we need one for programming!)
+* 1x ATmega328P chip, breadboard-friendly package recommended
+* breadboard
+* 16 MHz crystal
+* 2x 22 pF capacitor
+* 1x electrolytic capacitor for stabilizing the power lines, any value is fine
+* 3x momentary push button
+* 4x DIP switch
+* 1x Red LED
+* 1x 220 [Ohm] resistor
+* 6x 10k [Ohm] resitor
+* 1x L7805CV voltage regulator
+* various jumper wires
+* USB cable to connect the Arduino Uno to your PC
+
 
 
 ## Software design
