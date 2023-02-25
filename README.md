@@ -80,12 +80,14 @@ bool OR () {
 }
 ```
 
+And I allow myself some shortcuts with the inverse version of the gates: [^NAND]
+
 ``` c++
 bool NAND () {
   return !AND();
 }
 ```
-[^NAND] 
+
 
 [^NAND]: Observe that this is not entirely how a NAND gate is realized in hardware! In practise, an AND (so not a NAND) gate is made by placing an inverter after a NAND gate. Hence why AND gates are inherently slower than NAND gates. The NAND gate is the universal gate here. So, if I wanted to be 100% accurate, I should have made the `NAND()` function: `return !(digitalRead(b1) && digitalRead(b2));` and the `AND()` function: `return !NAND();`. But this, of course, wouldn't make things more clear. By the way, the same is true for NOR and OR. An OR gate is realized by inverting a NOR gate. (NEEDS SOURCE)
 
