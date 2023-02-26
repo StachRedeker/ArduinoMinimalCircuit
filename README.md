@@ -118,15 +118,27 @@ bool NAND () {
 ```
 
 
-[^NAND]: Observe that this is not how a NAND gate is realized in hardware! In practise, an AND (so not a NAND) gate is made by placing an inverter after a NAND gate. Hence why AND gates are inherently slower than NAND gates. The NAND gate is the universal gate here. So, if I wanted to be 100% accurate, I should have made the `NAND()` function: `return !(digitalRead(b1) && digitalRead(b2));` and the `AND()` function: `return !NAND();`. But this, of course, wouldn't make things more clear. By the way, the same is true for NOR and OR. An OR gate is realized by inverting a NOR gate. (NEEDS SOURCE)
-
-
-
+[^NAND]: Observe that this is not how a NAND gate is realized in hardware! In practise, an AND (so not a NAND) gate is made by placing an inverter after a NAND gate. Hence why AND gates are inherently slower than NAND gates. The NAND gate is the universal gate here. So, if I wanted to be 100% accurate, I should have made the `NAND()` function: `return !(digitalRead(b1) && digitalRead(b2));` and the `AND()` function: `return !NAND();`. But this, of course, wouldn't make things more clear. By the way, the same is true for NOR and OR. An OR gate is realized by inverting a NOR gate. [SOURCE](https://www.quora.com/Why-are-NAND-gates-used-more-predominantly-than-AND-gates)
 
 
 
 ## Instructions
 
+Now, on to the millon dollar question: how to acctually program the chip? This is a 3-step process:
+
+1. Set up the Arduino as a flashing device.
+2. Burn the bootloader on our ATmega328P chip.
+3. Flash the code to the ATmega328P chip using the Arduino.
+
+### 1. Set up the Arduino as a flashing device
+Connect the Arduino to your computer and fire up the Arduino IDE. You might want to disconnect the Arduino from your circuit. This is not strictly necessary, but I found that unwanted behavior can occur if connected to the circuit. If you already connected the Arduino to the circuit, this is fine. But if problems occur, a good troubleshooting step can be to disconnect the Arduino from the circuit. 
+
+In the Arduino IDE, go to File > Examples > 11. ArduinoISP > ArduinoISP. Upload this code to your Arduino board. 
+
+Congratulations! You've set up the Arduino as a flashing device.
+
+### 2. Burn the bootloader on our ATmega328P chip.
+Now, we are going to burn the bootloader on our ATmega328P chip. The bootloader is software that is required for the processor to understand our program.
 
 
 
