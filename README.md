@@ -138,8 +138,14 @@ In the Arduino IDE, go to `File > Examples > 11. ArduinoISP > ArduinoISP`. Uploa
 Congratulations! You've set up the Arduino as a flashing device.
 
 ### 2. Burn the bootloader on our ATmega328P chip.
-Now, we are going to burn the bootloader on our ATmega328P chip. The bootloader is software that is required for the processor to understand our program.
+Next, we are going to burn the bootloader on our ATmega328P chip. The bootloader is software that is required for the processor to understand our program. Now, the ATmega328P needs to be connected to our Arduino.  Make sure that the switches are set to the off position, or temporarliy disconnected. If the pins where the Arduino connects to the ATmega328P are pulled high (so set to 5V), the ATmega328P is not able to receive signals from the Arduino.
 
+Select `Tools > Programmer > Arduino as ISP` and then press `Tools > Burn bootloader`. This might take a minute. 
+
+### 3. Flash the code to the ATmega328P chip using the Arduino.
+Lastly, we have to put our code on the ATmega328P chip. Open `ArduinoMinimalCircuit.ino`, select the right target board (Arduino Uno), and COM port. Keep the Programmer `Arduino as ISP`. Now − and this is important! − press and hold the SHIFT key on your keyboard, while pressing the upload button. If you hover over the `Upload` button, the text next to `Upload` will switch from 'Upload' to 'Upload Using Programmer'. Click `Upload` and let go of the SHIFT key.
+
+Well done, you have just programmed your ATmega328P chip!
 
 
 ## Improvements
