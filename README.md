@@ -133,7 +133,7 @@ Now, on to the millon dollar question: how to acctually program the chip? This i
 ### 1. Set up the Arduino as a flashing device
 Connect the Arduino to your computer and fire up the Arduino IDE. You might want to disconnect the Arduino from your circuit. This is not strictly necessary, but I found that unwanted behavior can occur if connected to the circuit. If you already connected the Arduino to the circuit, this is fine. But if problems occur, a good troubleshooting step can be to disconnect the Arduino from the circuit. 
 
-In the Arduino IDE, go to File > Examples > 11. ArduinoISP > ArduinoISP. Upload this code to your Arduino board. 
+In the Arduino IDE, go to `File > Examples > 11. ArduinoISP > ArduinoISP`. Upload this code to your Arduino board. 
 
 Congratulations! You've set up the Arduino as a flashing device.
 
