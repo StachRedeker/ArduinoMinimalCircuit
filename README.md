@@ -91,7 +91,7 @@ You can use Figure 1 as a reference on how the connections are made.
 
 I tried to keep the software for this project lean and readable. The main system is a big `switch` statement that takes the input of the switches and mimics the requested logic gate accordingly. 
 
-I use a clever trick to convert the (binary) input of the switches to an integer. I multiply the most siginifant bit (MSB) with 2^3 (=8), MSB-1 with 2^2 (=4), MSB-2 with 2^1 (=2), and the least significant bit (LSB) with 2^0 (=1). This is binary! So, we converted the 4 1s and 0s to a 4-bit integer. Pretty cool.
+I use a clever trick to convert the (binary) input of the switches to an integer. I multiply the most siginifant bit (`MSB`) with 2^3 (=8), `MSB-1` with 2^2 (=4), `MSB-2` with 2^1 (=2), and the least significant bit (`LSB`) with 2^0 (=1). This is binary! So, we converted the 4 1s and 0s to a 4-bit integer. Pretty cool.
 
 ``` c++
 int getSwitchStatus () {
@@ -106,6 +106,8 @@ bool OR () {
   return (digitalRead(b1) || digitalRead(b2));
 }
 ```
+
+So, no need for truth tables. We are ~abusing~ using the build-in logic operations that the ATmega328P already has. Observe that the use of seperate functions is not strictly necessary. The contents of the function can also be placed directly in the `switch` statement. However, this would harm the readability of the code, so I opted not to do this.
 
 And I allow myself some shortcuts with the inverse version of the gates: [^NAND]
 
