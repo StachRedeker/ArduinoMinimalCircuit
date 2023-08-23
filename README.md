@@ -144,8 +144,16 @@ Well done, you have just programmed your ATmega328P chip!
 
 ## Improvements
 
-- [ ] Include a chip that converts USB to UART such that the ATmega328P can be programmed directly using USB.
-- [ ] Find a method that allows for powering the circuit from (unstable) USB voltage, instead of a 9 [V] battery.
+> **Note**
+> Two updates on these improvements! Read the footnotes.
+
+- [ ] Include a chip that converts USB to UART such that the ATmega328P can be programmed directly using USB. [^UART]
+- [x] Find a method that allows for powering the circuit from (unstable) USB voltage, instead of a 9 [V] battery. [^USB]
+
+
+[^UART]: The general consensus seems to be that one should not do this. If you are in need of a USB-programmable microcontroller, just use a prebuilt Arduino Uno or Nano. It is cheap, easy to use, and you eliminate a lot of failure points. If you use an ATmega328P directly (i.e. on a PCB), it is assumed that you will program it once (or twice) and then forget about it. Use the programming method as suggested above. Or, use an IC socket and transfer the ATmega328P to an Arduino Uno to program.
+
+[^USB]: This is totally possible! And it does not require a lot of modifications. Throw in some extra smoothing capacitors and you should be fine. ATmega328P chips run fine on voltages anywhere between 4.5 [V] and 5.5[V]. Be aware that some USB power sources might be more noisy than others. [SOURCE](https://electronics.stackexchange.com/questions/156499/power-atmel-atmega328p-directly-from-usb)
 
 
 ## License
