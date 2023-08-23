@@ -145,7 +145,7 @@ Well done, you have just programmed your ATmega328P chip!
 ## Improvements
 
 > **Note**
-> Two updates on these improvements! Read the footnotes.
+> Two updates (23/08/23) on these improvements! Read the footnotes.
 
 - [ ] Include a chip that converts USB to UART such that the ATmega328P can be programmed directly using USB. [^UART]
 - [x] Find a method that allows for powering the circuit from (unstable) USB voltage, instead of a 9 [V] battery. [^USB]
