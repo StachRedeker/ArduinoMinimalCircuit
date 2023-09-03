@@ -55,9 +55,7 @@ These components are needed for the build:
 * various jumper wires
 * USB cable to connect the Arduino Uno to your PC
 
-Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (which will function as a clock), and three capacitors. Here, a value of 10 [uF] is used for the electrolytic capacitor. Feel free to pick an arbitrary value. The electrolytic capacitor stabilizes the voltage on the 5 [V] rails[^stabilize]. This is good practice, but you can omit this capacitor if you do not have one available. The two ceramic capacitors of 22 [pF] cannot be omitted![^ceramic]
-
-[^stabilize]: If you look at Figure 1, you see that my placement of the stabilizing capacitor is not quite correct. It only stabilizes the upper power lanes, not the lower power lines, because it is placed after the upper lanes branch of the lower lines. It is best if the capacitor is placed before the branch. Alternatively, one can also place a capacitor across every set of power lines. Nevertheless, the stabilizing capacitor does not really matter if your 5 [V] input is sufficiently stable, which is the case in my circuit.
+Firstly, build the ATmega328P minimal circuit. You can use Figure 2 as a reference. For this step, you need a 10k [Ohm] resistor, the crystal (which will function as a clock), and three capacitors. Here, a value of 10 [uF] is used for the electrolytic capacitor. Feel free to pick an arbitrary value. The electrolytic capacitor stabilizes the voltage on the 5 [V] rails. This is good practice, but you can omit this capacitor if you do not have one available. The two ceramic capacitors of 22 [pF] cannot be omitted![^ceramic]
 
 [^ceramic]: This is not entirely true. The ATmega328P has an inbuild 8 [MHz] oscillator that can be used without 22 [pF] capacitors, or if an external clock signal of 16 [MHz] is not present. However, this internal clock signal is [inaccurate](https://electronics.stackexchange.com/questions/27763/using-the-atmega328-with-the-internal-oscillator), so I'll not use it here.
 
